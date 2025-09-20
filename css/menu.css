@@ -20,3 +20,53 @@
    - :hover → Quando mouse está sobre elemento
    - transition → Suaviza mudanças entre estados
    =============================================== */
+
+   .menu-link{
+      display : flex;                   /* Flexbox para alinhar itens */
+      align-items : center;             /* Centraliza verticalmente */
+      gap : 12px;                       /* Espaço entre ícone e texto */
+      padding : 12px 16px;               /* Espaçamento interno */
+      background : #0f1729;             /* Fundo do menu */
+      border-radius : 8px;              /* Bordas arredondadas */
+      color: #8892b0;                /* Cor do texto */
+      cursor:pointer;                  /* Cursor de clique */
+      transition : all 0.3s ease;       /* Animação suave para todas as propriedades */
+      border: 1px solid #233554; /* Borda inicial transparente */
+   }
+
+   .menu-link icon{
+      font-size : 20px;                 /* Tamanho do ícone */
+      color: #64ffda;                /* Cor do ícone */
+      transition : transform 0.3s ease; /* Animação suave para transformações */
+   }
+
+   .menu-text{
+      flex : 1;                         /* Texto ocupa o espaço restante */
+      font-size : 14px;                 /* Tamanho da fonte */
+      font-weight : 500;                /* Peso da fonte */
+   }
+
+   .menu-arrow{
+      font-size : 12px;                 /* Tamanho da seta */
+      color: #8892b0;                /* Cor da seta */
+      transition : transform 0.3s ease; /* Animação suave para transformações */
+   }
+
+   /* ======================================================================================= */
+
+
+   .menu-item:hover .menu-link{
+      background : #1e2a4a;             /* Fundo ao passar o mouse */
+      color: #64ffda;                /* Cor do texto ao passar o mouse */
+      border: 1px solid #64ffda; /* Borda visível ao passar o mouse */
+      transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+   }
+
+   .menu-item:hover .menu-item i{
+      transform : scale(1.1);           /* Aumenta o ícone ao passar o mouse */
+   }
+
+   .menu-item:hover .menu-arrow{
+      transform : rotate(180deg); /* Rotaciona e aumenta a seta ao passar o mouse */
+      color: #64ffda;                /* Cor da seta ao passar o mouse */
+   }
